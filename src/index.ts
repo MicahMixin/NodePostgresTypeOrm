@@ -1,5 +1,5 @@
 const express = require("express");
-const userRouter = require("./routers/user");
+const appRouter = require("./routers/index");
 require("dotenv").config();
 
 import "reflect-metadata";
@@ -8,7 +8,7 @@ const app = express();
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-app.use(userRouter);
+app.use(appRouter);
 
 const port = process.env.PORT || 4000;
 

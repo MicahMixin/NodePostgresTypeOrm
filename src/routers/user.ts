@@ -1,21 +1,33 @@
 const express = require("express");
-const { auth, getUser } = require("../middleware/auth");
+const { auth } = require("../middleware/auth");
 
 import { Request, Response } from "express";
-import { controller } from "../controller/controller";
+import { userController } from "../controller/userController";
 
 const router = new express.Router();
 
 router.post("/users", async (req: Request, res: Response) => {
-  controller.userRegister(req, res);
+  userController.userRegister(req, res);
 });
 
-router.post("/users/login", async (req: Request, res: Response) => {
-  controller.userLogin(req, res);
+router.post("/users/login", async (req: Request, res: Response, next: any) => {
+  userController.userLogin(req, res);
 });
 
 router.get("/users/me", auth, async (req: Request, res: Response) => {
-  getUser(req, res);
+  userController.userDetails(req, res);
+});
+
+router.get("/users/:id", auth, async (req: any, res: Response) => {
+  userController.userById(req, res);
+});
+
+router.delete("/users/:id", auth, async (req: any, res: Response) => {
+  userController.deleteUserById(req, res);
+});
+
+router.patch("/users/:id", auth, async (req: any, res: Response) => {
+  userController.updateUserById(req, res);
 });
 
 module.exports = router;

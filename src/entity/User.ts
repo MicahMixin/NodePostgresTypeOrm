@@ -46,7 +46,7 @@ export class User {
     return await bcrypt.compareSync(attempt, this.password);
   }
 
-  toResponseObject(showToken: boolean = true): UserRO {
+  toResponseObject(): UserRO {
     const { id, firstName, lastName, email } = this;
     const responseObject: UserRO = {
       id,
@@ -59,7 +59,7 @@ export class User {
   }
 
   generateAuthToken() {
-    const token = jwt.sign({ id: this.id }, process.env.JWT_SECRET);
+    const token = jwt.sign(this.toResponseObject(), process.env.JWT_SECRET);
     return token;
   }
 }
