@@ -6,9 +6,11 @@ import {
   Column,
   BeforeInsert,
   BeforeUpdate,
+  OneToMany,
 } from "typeorm";
 import { MinLength, IsEmail, IsAlpha } from "class-validator";
 import { UserRO } from "../types";
+import { Sneaker } from "./Sneaker";
 
 const SALT = 8;
 
@@ -28,6 +30,9 @@ export class User {
   @Column({ unique: true })
   @IsEmail()
   email: string;
+
+  @OneToMany(() => Sneaker, (sneaker) => sneaker.user)
+  sneakers: Sneaker[];
 
   @Column()
   @MinLength(8, {

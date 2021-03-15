@@ -1,4 +1,6 @@
 import { Connection, createConnection } from "typeorm";
+import { dbConfig } from "../config/dbConfig";
+import { Sneaker } from "../entity/Sneaker";
 import { User } from "../entity/User";
 
 export class db {
@@ -16,11 +18,11 @@ export class db {
     createConnection({
       type: "postgres",
       host: "localhost",
-      port: 5432,
+      port: dbConfig.port,
       username: "postgres",
-      password: "root",
-      database: "sneakers",
-      entities: [User],
+      password: dbConfig.password,
+      database: dbConfig.database,
+      entities: [User, Sneaker],
       synchronize: true,
       logging: false,
     })

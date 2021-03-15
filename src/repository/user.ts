@@ -1,25 +1,17 @@
-import { Repository } from "typeorm";
-import { dbConnection } from "../db/db";
 import { User } from "../entity/User";
+import { BaseRepository } from "./baseRepository";
 
-export class UserRepository {
-  public async getRepository() {
-    return await dbConnection.getConnection().getRepository(User);
-  }
-
+export class UserRepository extends BaseRepository<User> {
   public async findOne(field: any) {
-    const userRepo = await dbConnection.getConnection().getRepository(User);
-    return await userRepo.findOne(field);
+    return (await this.getRepository(User)).findOne(field);
   }
 
   public async save(user: User) {
-    const userRepo = await dbConnection.getConnection().getRepository(User);
-    return await userRepo.save(user);
+    return (await this.getRepository(User)).save(user);
   }
 
   public async remove(user: User) {
-    const userRepo = await dbConnection.getConnection().getRepository(User);
-    return await userRepo.remove(user);
+    return (await this.getRepository(User)).remove(user);
   }
 }
 
