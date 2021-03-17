@@ -20,8 +20,8 @@ export class UserController {
         ERROR_MESSAGES.HTTP_BAD_REQUEST
       );
     }
-    await userRepository.save(user); // TODO: 3
-    req.body = { code: 201, data: "User created successfully" };
+    await userRepository.save(user);
+    res["response"] = { code: 201, data: "User created successfully" };
     next();
   }
 
@@ -40,7 +40,10 @@ export class UserController {
       );
     }
     const token = user.generateAuthToken();
-    req.body = { code: 200, data: { token } };
+    res["response"] = {
+      code: 200,
+      data: { token },
+    };
     next();
   }
 
@@ -56,7 +59,7 @@ export class UserController {
       );
     }
     const { id, firstName, lastName, email } = user;
-    req.body = {
+    res["response"] = {
       code: 200,
       data: {
         user: {
@@ -74,7 +77,7 @@ export class UserController {
   public async userDetails(req: Request, res: Response, next: NextFunction) {
     const { id, firstName, lastName, email } = req["user"];
     const userResponse = { user: { id, firstName, lastName, email } };
-    req.body = {
+    res["response"] = {
       code: 200,
       data: userResponse,
     };
@@ -92,7 +95,10 @@ export class UserController {
       );
     }
     await userRepository.remove(user);
-    req.body = { code: 204, data: "User deleted successfully" };
+    res["response"] = {
+      code: 204,
+      data: "User deleted successfully",
+    };
     next();
   }
 
@@ -118,7 +124,10 @@ export class UserController {
       }
     });
     await userRepository.save(user);
-    req.body = { code: 202, data: "User updated successfully" };
+    res["response"] = {
+      code: 202,
+      data: "User updated successfully",
+    };
     next();
   }
 }

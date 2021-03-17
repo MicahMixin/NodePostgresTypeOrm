@@ -11,7 +11,8 @@ router.get(
   auth,
   async (req: Request, res: Response, next: NextFunction) => {
     userController.userDetails(req, res, next);
-  }
+  },
+  responseHandler
 );
 
 router.post(
@@ -23,7 +24,7 @@ router.post(
 
 router.post(
   "/users/login",
-  async (req: Request, res: Response, next: NextFunction) => {
+  (req: Request, res: Response, next: NextFunction) => {
     userController.userLogin(req, res, next);
   }
 );
@@ -53,3 +54,11 @@ router.patch(
 );
 
 module.exports = router;
+function responseHandler(
+  arg0: string,
+  auth: any,
+  arg2: (req: Request, res: Response, next: NextFunction) => Promise<void>,
+  responseHandler: any
+) {
+  throw new Error("Function not implemented.");
+}

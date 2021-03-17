@@ -1,5 +1,6 @@
 const jwt = require("jsonwebtoken");
 import { Request, Response } from "express";
+import { ERROR_CODES, ERROR_MESSAGES } from "../enum";
 import { userRepository } from "../repository/user";
 
 const auth = async (req: Request, res: Response, next) => {
@@ -8,12 +9,18 @@ const auth = async (req: Request, res: Response, next) => {
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
     const user = await userRepository.findOne({ id: decoded.id });
     if (!user) {
-      throw new Error();
+      next({
+        statusCode: ERROR_CODES.HTTP_NOT_FOUND,
+        message: ERROR_MESSAGES.HTTP_NOT_FOUND,
+      });
     }
     req["user"] = user;
     next();
   } catch (error) {
-    res.status(401).json({ Error: "Invalid token" });
+    next({
+      statusCode: ERROR_CODES.HTTP_UNAUTHORIZED,
+      message: ERROR_MESSAGES.HTTP_UNAUTHORIZED,
+    });
   }
 };
 

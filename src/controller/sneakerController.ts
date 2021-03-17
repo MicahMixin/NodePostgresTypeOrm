@@ -5,8 +5,6 @@ import { Sneaker } from "../entity/Sneaker";
 import { ERROR_CODES, ERROR_MESSAGES } from "../enum";
 import { sneakerRepository } from "../repository/sneaker";
 import { ServerError } from "../serverError";
-const { errorHandler } = require("../middleware/errorHandler");
-const { responseHandler } = require("../middleware/responseHandler");
 
 export class SneakerController {
   @catchError
@@ -23,7 +21,7 @@ export class SneakerController {
       );
     }
     await sneakerRepository.save(sneaker);
-    req.body = { code: 201, data: "Sneaker created successfully" };
+    res["response"] = { code: 201, data: "Sneaker created successfully" };
     next();
   }
 
@@ -37,7 +35,7 @@ export class SneakerController {
       );
     }
     const { brand, model, type, year, shoeSize } = sneaker;
-    req.body = {
+    res["response"] = {
       code: 200,
       data: {
         brand,
@@ -61,7 +59,7 @@ export class SneakerController {
       );
     }
     const { brand, model, type, year, shoeSize } = sneaker;
-    req.body = {
+    res["response"] = {
       code: 200,
       data: {
         brand,
@@ -88,7 +86,7 @@ export class SneakerController {
       );
     }
     await sneakerRepository.remove(sneaker);
-    req.body = {
+    res["response"] = {
       code: 204,
       data: "Sneaker deleted successfully",
     };
@@ -120,7 +118,7 @@ export class SneakerController {
       }
     });
     await sneakerRepository.save(sneaker);
-    req.body = {
+    res["response"] = {
       code: 204,
       data: "Sneaker updated successfully",
     };
