@@ -1,125 +1,130 @@
 import { ValidationError, validate } from "class-validator";
-import { Request, Response } from "express";
+import { NextFunction, Request, Response } from "express";
+import { catchError } from "../decorators/catchError";
 import { Sneaker } from "../entity/Sneaker";
+import { ERROR_CODES, ERROR_MESSAGES } from "../enum";
 import { sneakerRepository } from "../repository/sneaker";
+import { ServerError } from "../serverError";
 const { errorHandler } = require("../middleware/errorHandler");
 const { responseHandler } = require("../middleware/responseHandler");
 
 export class SneakerController {
-  public async addNewSneaker(req: Request, res: Response) {
-    try {
-      const { brand, type, model, year, shoeSize } = req.body;
-      let sneaker = new Sneaker();
-      sneaker.brand = brand;
-      sneaker.model = model;
-      sneaker.type = type;
-      sneaker.year = year;
-      sneaker.shoeSize = shoeSize;
-      const errors: ValidationError[] = await validate(sneaker, {
-        validationError: { target: false },
-      });
-      if (errors.length > 0) {
-        const response = errorHandler(400, JSON.stringify(errors));
-        return res.status(400).send(response);
-      }
-      await sneakerRepository.save(sneaker);
-      const response = responseHandler("Sneaker created successfully");
-      res.status(201).send(response);
-    } catch (error) {
-      const response = errorHandler(400);
-      res.status(400).send(response);
-    }
-  }
-
-  public async getSneakerById(req: Request, res: Response) {
-    try {
-      const sneaker: Sneaker = await sneakerRepository.findOne(req.params.id);
-      if (!sneaker) {
-        const response = errorHandler(404, "Sneaker not found");
-        return res.status(404).send(response);
-      }
-      const { brand, model, type, year, shoeSize } = sneaker;
-      const response = responseHandler({
-        brand,
-        model,
-        type,
-        year,
-        shoeSize,
-      });
-      res.status(200).send(response);
-    } catch (error) {
-      const response = errorHandler(400);
-      res.status(400).send(response);
-    }
-  }
-
-  public async getSneaker(req: Request, res: Response) {
-    const { params } = req.query;
-    try {
-      const sneaker: Sneaker = await sneakerRepository.findOne({ params });
-      if (!sneaker) {
-        const response = errorHandler(404, "Sneaker not found");
-        return res.status(404).send(response);
-      }
-      const { brand, model, type, year, shoeSize } = sneaker;
-      const response = responseHandler({
-        brand,
-        model,
-        type,
-        year,
-        shoeSize,
-      });
-      res.status(200).send(response);
-    } catch (error) {
-      const response = errorHandler(400);
-      res.status(400).send(response);
-    }
-  }
-
-  public async deleteSneakerById(req: Request, res: Response) {
-    try {
-      const sneaker: Sneaker = await sneakerRepository.findOne(req.params.id);
-      if (!sneaker) {
-        const response = errorHandler(404, "Sneaker not found");
-        return res.status(404).send(response);
-      }
-      await sneakerRepository.remove(sneaker);
-      const response = responseHandler("Sneaker deleted sucessfully");
-      return res.status(204).send(response);
-    } catch (error) {
-      const response = errorHandler(400);
-      res.status(400).send(response);
-    }
-  }
-
-  public async updateSneakerById(req: Request, res: Response) {
-    try {
-      const sneaker: Sneaker = await sneakerRepository.findOne(req.params.id);
-      if (!sneaker) {
-        const response = errorHandler(404, "Sneaker not found");
-        return res.status(404).send(response);
-      }
-      const updates = Object.keys(req.body);
-      const allowedUpdates = ["brand", "type", "model", "year", "shoeSize"];
-      const isValidUpdate = updates.every((update) =>
-        allowedUpdates.includes(update)
+  @catchError
+  public async addNewSneaker(req: Request, res: Response, next: NextFunction) {
+    const { brand, type, model, year, shoeSize } = req.body;
+    let sneaker = new Sneaker(brand, model, type, year, shoeSize);
+    const errors: ValidationError[] = await validate(sneaker, {
+      validationError: { target: false },
+    });
+    if (errors.length > 0) {
+      throw new ServerError(
+        ERROR_CODES.HTTP_BAD_REQUEST,
+        ERROR_MESSAGES.HTTP_BAD_REQUEST
       );
-      if (!isValidUpdate) {
-        throw new Error();
-      }
-      try {
-        updates.forEach((update) => (sneaker[update] = req.body[update]));
-        await sneakerRepository.save(sneaker);
-      } catch (error) {
-        const response = errorHandler(500);
-        res.status(500).send(response);
-      }
-      const response = responseHandler("Sneaker updated successfully");
-      res.status(202).send(response);
-    } catch (error) {
-      const response = errorHandler(400);
-      res.status(400).send(response);
     }
+    await sneakerRepository.save(sneaker);
+    req.body = { code: 201, data: "Sneaker created successfully" };
+    next();
+  }
+
+  @catchError
+  public async getSneakerById(req: Request, res: Response, next: NextFunction) {
+    const sneaker: Sneaker = await sneakerRepository.findOne(req.params.id);
+    if (!sneaker) {
+      throw new ServerError(
+        ERROR_CODES.HTTP_NOT_FOUND,
+        ERROR_MESSAGES.HTTP_NOT_FOUND
+      );
+    }
+    const { brand, model, type, year, shoeSize } = sneaker;
+    req.body = {
+      code: 200,
+      data: {
+        brand,
+        model,
+        type,
+        year,
+        shoeSize,
+      },
+    };
+    next();
+  }
+
+  @catchError
+  public async getSneaker(req: Request, res: Response, next: NextFunction) {
+    const { params } = req.query;
+    const sneaker: Sneaker = await sneakerRepository.findOne({ params });
+    if (!sneaker) {
+      throw new ServerError(
+        ERROR_CODES.HTTP_NOT_FOUND,
+        ERROR_MESSAGES.HTTP_NOT_FOUND
+      );
+    }
+    const { brand, model, type, year, shoeSize } = sneaker;
+    req.body = {
+      code: 200,
+      data: {
+        brand,
+        model,
+        type,
+        year,
+        shoeSize,
+      },
+    };
+    next();
+  }
+
+  @catchError
+  public async deleteSneakerById(
+    req: Request,
+    res: Response,
+    next: NextFunction
+  ) {
+    const sneaker: Sneaker = await sneakerRepository.findOne(req.params.id);
+    if (!sneaker) {
+      throw new ServerError(
+        ERROR_CODES.HTTP_NOT_FOUND,
+        ERROR_MESSAGES.HTTP_NOT_FOUND
+      );
+    }
+    await sneakerRepository.remove(sneaker);
+    req.body = {
+      code: 204,
+      data: "Sneaker deleted successfully",
+    };
+    next();
+  }
+
+  @catchError
+  public async updateSneakerById(
+    req: Request,
+    res: Response,
+    next: NextFunction
+  ) {
+    const sneaker: Sneaker = await sneakerRepository.findOne(req.params.id);
+    if (!sneaker) {
+      throw new ServerError(
+        ERROR_CODES.HTTP_NOT_FOUND,
+        ERROR_MESSAGES.HTTP_NOT_FOUND
+      );
+    }
+    const updates = Object.keys(req.body);
+    updates.forEach((field) => {
+      if (sneaker.canUpdate(field)) {
+        sneaker[field] = req.body[field];
+      } else {
+        throw new ServerError(
+          ERROR_CODES.HTTP_BAD_REQUEST,
+          `${[field]} field does not exist`
+        );
+      }
+    });
+    await sneakerRepository.save(sneaker);
+    req.body = {
+      code: 204,
+      data: "Sneaker updated successfully",
+    };
+    next();
   }
 }
 

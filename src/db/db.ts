@@ -17,9 +17,9 @@ export class db {
   setupConnection = () => {
     createConnection({
       type: "postgres",
-      host: "localhost",
+      host: dbConfig.host,
       port: dbConfig.port,
-      username: "postgres",
+      username: dbConfig.username,
       password: dbConfig.password,
       database: dbConfig.database,
       entities: [User, Sneaker],
@@ -27,7 +27,7 @@ export class db {
       logging: false,
     })
       .then((connection: Connection) => {
-        console.log("connected to POSTGRES (burp) ספרגטסופ");
+        console.log("connected to POSTGRES (burp) ספערגטסופ");
         // here you can start to work with your entities
         this.connection = connection;
       })

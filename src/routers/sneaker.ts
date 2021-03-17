@@ -1,29 +1,49 @@
 const express = require("express");
 const { auth } = require("../middleware/auth");
 
-import { Request, Response } from "express";
+import { NextFunction, Request, Response } from "express";
 import { sneakerController } from "../controller/sneakerController";
 
 const router = new express.Router();
 
-router.post("/sneakers", auth, async (req: Request, res: Response) => {
-  sneakerController.addNewSneaker(req, res);
-});
+router.post(
+  "/sneakers",
+  auth,
+  async (req: Request, res: Response, next: NextFunction) => {
+    sneakerController.addNewSneaker(req, res, next);
+  }
+);
 
-router.get("/sneakers/:id", auth, async (req: Request, res: Response) => {
-  sneakerController.getSneakerById(req, res);
-});
+router.get(
+  "/sneakers/:id",
+  auth,
+  async (req: Request, res: Response, next: NextFunction) => {
+    sneakerController.getSneakerById(req, res, next);
+  }
+);
 
-router.get("/sneakers/", auth, async (req: Request, res: Response) => {
-  sneakerController.getSneaker(req, res);
-});
+router.get(
+  "/sneakers/",
+  auth,
+  async (req: Request, res: Response, next: NextFunction) => {
+    sneakerController.getSneaker(req, res, next);
+  }
+);
 
-router.delete("/sneakers/:id", auth, async (req: Request, res: Response) => {
-  sneakerController.deleteSneakerById(req, res);
-});
+router.delete(
+  "/sneakers/:id",
+  auth,
+  async (req: Request, res: Response, next: NextFunction) => {
+    sneakerController.deleteSneakerById(req, res, next);
+  }
+);
 
-router.patch("/sneakers/:id", auth, async (req: Request, res: Response) => {
-  sneakerController.updateSneakerById(req, res);
-});
+router.patch(
+  "/sneakers/:id",
+  auth,
+  async (req: Request, res: Response, next: NextFunction) => {
+    sneakerController.updateSneakerById(req, res, next);
+  }
+);
 
 module.exports = router;

@@ -1,30 +1,22 @@
+import { NextFunction, Request, Response } from "express";
+import { ERROR_CODES } from "../enum";
 import { ApiResponse } from "../types";
 
-const errorHandler = (status: number, error: string = "") => {
+const errorHandler = (
+  err: any,
+  req: Request,
+  res: Response,
+  next: NextFunction
+) => {
+  const errorCode = err.statusCode ?? ERROR_CODES.HTTP_BAD_REQUEST;
   let response: ApiResponse = {
     success: false,
     data: {},
-    error,
+    error: err.message,
     version: "1.0.0",
   };
 
-  if (error == "") {
-    switch (status) {
-      case 400:
-        response.error = "Bad request";
-        break;
-      case 403:
-        response.error = "Not authorized";
-        break;
-      case 404:
-        response.error = "Not found";
-        break;
-      case 500:
-        response.error = "Internal server error";
-        break;
-    }
-  }
-  return response;
+  res.status(errorCode).json(response);
 };
 
 module.exports = { errorHandler };

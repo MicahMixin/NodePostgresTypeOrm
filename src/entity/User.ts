@@ -67,4 +67,20 @@ export class User {
     const token = jwt.sign(this.toResponseObject(), process.env.JWT_SECRET);
     return token;
   }
+
+  canUpdate(field: string) {
+    return field === "firstName" || field === "lastName" || field === "email";
+  }
+
+  constructor(
+    firstName: string,
+    lastName: string,
+    email: string,
+    password: string
+  ) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.email = email;
+    this.password = password;
+  }
 }
