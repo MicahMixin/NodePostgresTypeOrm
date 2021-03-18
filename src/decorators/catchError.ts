@@ -6,11 +6,9 @@ export const catchError = (target, key, descriptor) => {
     try {
       await fn.apply(this, args);
     } catch (error: any) {
-      const [, , next] = args;
-      next({
-        statusCode: error.statusCode ?? ERROR_CODES.HTTP_SERVER_ERROR,
-        message: error.message,
-      });
+      const [req, res, next] = args;
+      res.statusCode = error.statusCode ?? ERROR_CODES.HTTP_SERVER_ERROR;
+      res.send(error.message);
     }
   };
 };

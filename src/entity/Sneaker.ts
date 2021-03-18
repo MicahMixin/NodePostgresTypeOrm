@@ -1,5 +1,5 @@
 import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from "typeorm";
-import { IsAlpha, IsNumber } from "class-validator";
+import { IsAlpha, IsAlphanumeric, IsNumber } from "class-validator";
 import { User } from "./User";
 
 @Entity()
@@ -8,19 +8,19 @@ export class Sneaker {
   id: number;
 
   @Column()
-  @IsAlpha()
+  @IsAlphanumeric()
   brand: string;
 
   @Column()
-  @IsAlpha()
+  @IsAlphanumeric()
   type: string;
 
   @Column()
-  @IsAlpha()
+  @IsAlphanumeric()
   model: string;
 
   @Column()
-  @IsAlpha()
+  @IsNumber()
   year: string;
 
   @Column()
@@ -31,12 +31,7 @@ export class Sneaker {
   user: User;
 
   canUpdate(field: string) {
-    return (
-      field === "brand" ||
-      field === "type" ||
-      field === "model" ||
-      field === "shoeSize"
-    );
+    return ["brand", "type", "year", "model", "shoeSize"].includes(field);
   }
 
   constructor(

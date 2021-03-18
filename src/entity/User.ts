@@ -69,8 +69,7 @@ export class User {
   }
 
   canUpdate(field: string) {
-    // TODO: a
-    return field === "firstName" || field === "lastName" || field === "email";
+    return ["firstName", "lastName", "email"].includes(field);
   }
 
   constructor(

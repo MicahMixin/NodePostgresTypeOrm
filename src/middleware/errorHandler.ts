@@ -1,22 +1,9 @@
 import { NextFunction, Request, Response } from "express";
-import { ERROR_CODES } from "../enum";
-import { ApiResponse } from "../types";
+import { ERROR_CODES, ERROR_MESSAGES } from "../enum";
 
-const errorHandler = (
-  err: any,
-  req: Request,
-  res: Response,
-  next: NextFunction
-) => {
-  const errorCode = err.statusCode ?? ERROR_CODES.HTTP_BAD_REQUEST;
-  let response: ApiResponse = {
-    success: false,
-    data: {},
-    error: err.message,
-    version: "1.0.0",
-  };
-
-  res.status(errorCode).json(response);
+const errorHandler = (req: Request, res: Response, next: NextFunction) => {
+  res.statusCode = ERROR_CODES.HTTP_BAD_REQUEST;
+  res.send(ERROR_MESSAGES.HTTP_BAD_REQUEST);
 };
 
 module.exports = { errorHandler };

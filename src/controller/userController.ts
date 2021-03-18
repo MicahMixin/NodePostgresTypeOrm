@@ -59,29 +59,23 @@ export class UserController {
       );
     }
     const { id, firstName, lastName, email } = user;
-    res["response"] = {
-      code: 200,
-      data: {
-        user: {
-          id,
-          firstName,
-          lastName,
-          email,
-        },
+    res.statusCode = 200;
+    res.send({
+      user: {
+        id,
+        firstName,
+        lastName,
+        email,
       },
-    };
-    next();
+    });
   }
 
   @catchError
   public async userDetails(req: Request, res: Response, next: NextFunction) {
     const { id, firstName, lastName, email } = req["user"];
     const userResponse = { user: { id, firstName, lastName, email } };
-    res["response"] = {
-      code: 200,
-      data: userResponse,
-    };
-    next();
+    res.statusCode = 200;
+    res.send(userResponse);
   }
 
   @catchError

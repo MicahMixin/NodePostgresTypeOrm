@@ -10,9 +10,9 @@ const app = express();
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+app.use(responseHandler);
 app.use(appRouter);
 app.use(errorHandler);
-app.use(responseHandler);
 
 const port = process.env.PORT || 4000;
 

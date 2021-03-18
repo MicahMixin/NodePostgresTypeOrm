@@ -10,7 +10,7 @@ export class SneakerController {
   @catchError
   public async addNewSneaker(req: Request, res: Response, next: NextFunction) {
     const { brand, type, model, year, shoeSize } = req.body;
-    let sneaker = new Sneaker(brand, model, type, year, shoeSize);
+    let sneaker = new Sneaker(brand, type, model, year, shoeSize);
     const errors: ValidationError[] = await validate(sneaker, {
       validationError: { target: false },
     });
@@ -27,7 +27,8 @@ export class SneakerController {
 
   @catchError
   public async getSneakerById(req: Request, res: Response, next: NextFunction) {
-    const sneaker: Sneaker = await sneakerRepository.findOne(req.params.id);
+    const sneakerId = parseInt(req.params.id);
+    const sneaker: Sneaker = await sneakerRepository.findOne(sneakerId);
     if (!sneaker) {
       throw new ServerError(
         ERROR_CODES.HTTP_NOT_FOUND,
@@ -78,7 +79,8 @@ export class SneakerController {
     res: Response,
     next: NextFunction
   ) {
-    const sneaker: Sneaker = await sneakerRepository.findOne(req.params.id);
+    const sneakerId = parseInt(req.params.id);
+    const sneaker: Sneaker = await sneakerRepository.findOne(sneakerId);
     if (!sneaker) {
       throw new ServerError(
         ERROR_CODES.HTTP_NOT_FOUND,
@@ -99,7 +101,8 @@ export class SneakerController {
     res: Response,
     next: NextFunction
   ) {
-    const sneaker: Sneaker = await sneakerRepository.findOne(req.params.id);
+    const sneakerId = parseInt(req.params.id);
+    const sneaker: Sneaker = await sneakerRepository.findOne(sneakerId);
     if (!sneaker) {
       throw new ServerError(
         ERROR_CODES.HTTP_NOT_FOUND,
