@@ -13,6 +13,12 @@ export class SneakerRepository extends BaseRepository<Sneaker> {
   public async remove(sneaker: Sneaker) {
     return (await this.getRepository(Sneaker)).remove(sneaker);
   }
+
+  public async find(relationType: string) {
+    return (await this.getRepository(Sneaker)).find({
+      relations: [relationType],
+    });
+  }
 }
 
 export const sneakerRepository = new SneakerRepository();

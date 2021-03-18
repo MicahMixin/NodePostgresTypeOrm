@@ -21,8 +21,8 @@ export class SneakerController {
       );
     }
     await sneakerRepository.save(sneaker);
-    res["response"] = { code: 201, data: "Sneaker created successfully" };
-    next();
+    res.statusCode = 201;
+    res.send("Sneaker created successfully");
   }
 
   @catchError
@@ -35,42 +35,44 @@ export class SneakerController {
         ERROR_MESSAGES.HTTP_NOT_FOUND
       );
     }
-    const { brand, model, type, year, shoeSize } = sneaker;
-    res["response"] = {
-      code: 200,
-      data: {
-        brand,
-        model,
-        type,
-        year,
-        shoeSize,
-      },
-    };
-    next();
+    const { id, brand, model, type, year, shoeSize } = sneaker;
+    res.statusCode = 200;
+    res.send({
+      id,
+      brand,
+      model,
+      type,
+      year,
+      shoeSize,
+    });
   }
 
   @catchError
-  public async getSneaker(req: Request, res: Response, next: NextFunction) {
+  public async getSneaker(req: any, res: Response, next: NextFunction) {
     const { params } = req.query;
-    const sneaker: Sneaker = await sneakerRepository.findOne({ params });
+    const searchParams = params.split(":");
+    const field = searchParams[0];
+    const value = searchParams[1];
+
+    const sneaker: Sneaker = await sneakerRepository.findOne({
+      [field]: value,
+    });
     if (!sneaker) {
       throw new ServerError(
         ERROR_CODES.HTTP_NOT_FOUND,
         ERROR_MESSAGES.HTTP_NOT_FOUND
       );
     }
-    const { brand, model, type, year, shoeSize } = sneaker;
-    res["response"] = {
-      code: 200,
-      data: {
-        brand,
-        model,
-        type,
-        year,
-        shoeSize,
-      },
-    };
-    next();
+    const { id, brand, model, type, year, shoeSize } = sneaker;
+    res.statusCode = 200;
+    res.send({
+      id,
+      brand,
+      model,
+      type,
+      year,
+      shoeSize,
+    });
   }
 
   @catchError
@@ -88,11 +90,8 @@ export class SneakerController {
       );
     }
     await sneakerRepository.remove(sneaker);
-    res["response"] = {
-      code: 204,
-      data: "Sneaker deleted successfully",
-    };
-    next();
+    res.statusCode = 204;
+    res.send("Sneaker deleted successfully");
   }
 
   @catchError
@@ -121,11 +120,8 @@ export class SneakerController {
       }
     });
     await sneakerRepository.save(sneaker);
-    res["response"] = {
-      code: 204,
-      data: "Sneaker updated successfully",
-    };
-    next();
+    res.statusCode = 204;
+    res.send("Sneaker updated successfully");
   }
 }
 

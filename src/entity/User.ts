@@ -31,7 +31,7 @@ export class User {
   @IsEmail()
   email: string;
 
-  @OneToMany(() => Sneaker, (sneaker) => sneaker.user)
+  @OneToMany((type) => Sneaker, (sneaker) => sneaker.user)
   sneakers: Sneaker[];
 
   @Column()
@@ -52,12 +52,13 @@ export class User {
   }
 
   toResponseObject(): UserRO {
-    const { id, firstName, lastName, email } = this;
+    const { id, firstName, lastName, email, sneakers } = this;
     const responseObject: UserRO = {
       id,
       firstName,
       lastName,
       email,
+      sneakers,
     };
 
     return responseObject;
@@ -69,18 +70,20 @@ export class User {
   }
 
   canUpdate(field: string) {
-    return ["firstName", "lastName", "email"].includes(field);
+    return ["firstName", "lastName", "email", "sneakers"].includes(field);
   }
 
   constructor(
     firstName: string,
     lastName: string,
     email: string,
-    password: string
+    password: string,
+    sneakers: Sneaker[]
   ) {
     this.firstName = firstName;
     this.lastName = lastName;
     this.email = email;
     this.password = password;
+    this.sneakers = sneakers;
   }
 }

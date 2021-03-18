@@ -13,6 +13,10 @@ export class UserRepository extends BaseRepository<User> {
   public async remove(user: User) {
     return (await this.getRepository(User)).remove(user);
   }
+
+  public async find(relationType: string) {
+    return (await this.getRepository(User)).find({ relations: [relationType] });
+  }
 }
 
 export const userRepository = new UserRepository();

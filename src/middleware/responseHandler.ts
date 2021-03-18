@@ -1,16 +1,17 @@
-import { NextFunction, Request, Response } from "express";
+import { NextFunction } from "express";
 import { ApiResponse } from "../types";
 
 const responseHandler = (req: any, res: any, next: NextFunction) => {
-  let oldSend = res.send;
+  const oldSend = res.send;
   res.send = function (data) {
     res.send = oldSend;
-    const isSuccess = res.statusCode >= 200 && res.statusCode < 300;
+    const isSuccess = Math.floor(res.statusCode / 100) === 2;
+    const version = "1.0.0";
     const response: ApiResponse = {
       success: isSuccess,
       data: isSuccess ? data : "",
       error: isSuccess ? "" : data,
-      version: "1.0.0",
+      version,
     };
     return res.send(response);
   };

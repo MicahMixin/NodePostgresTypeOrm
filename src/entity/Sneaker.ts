@@ -27,7 +27,7 @@ export class Sneaker {
   @IsNumber()
   shoeSize: number;
 
-  @ManyToOne(() => User, (user) => user.sneakers)
+  @ManyToOne((type) => User, (user) => user.sneakers)
   user: User;
 
   canUpdate(field: string) {

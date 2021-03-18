@@ -15,7 +15,7 @@ router.post(
 );
 
 router.get(
-  "/sneakers/:id",
+  "/sneakers/:id(\\d+)",
   auth,
   async (req: Request, res: Response, next: NextFunction) => {
     sneakerController.getSneakerById(req, res, next);
@@ -23,7 +23,7 @@ router.get(
 );
 
 router.get(
-  "/sneakers/",
+  "/sneakers",
   auth,
   async (req: Request, res: Response, next: NextFunction) => {
     sneakerController.getSneaker(req, res, next);
@@ -31,7 +31,7 @@ router.get(
 );
 
 router.delete(
-  "/sneakers/:id",
+  "/sneakers/:id(\\d+)",
   auth,
   async (req: Request, res: Response, next: NextFunction) => {
     sneakerController.deleteSneakerById(req, res, next);
@@ -39,7 +39,7 @@ router.delete(
 );
 
 router.patch(
-  "/sneakers/:id",
+  "/sneakers/:id(\\d+)",
   auth,
   async (req: Request, res: Response, next: NextFunction) => {
     sneakerController.updateSneakerById(req, res, next);

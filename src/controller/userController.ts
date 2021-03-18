@@ -1,16 +1,18 @@
 import { ValidationError, validate } from "class-validator";
 import { NextFunction, Request, Response } from "express";
 import { catchError } from "../decorators/catchError";
+import { Sneaker } from "../entity/Sneaker";
 import { User } from "../entity/User";
 import { ERROR_CODES, ERROR_MESSAGES } from "../enum";
+import { sneakerRepository } from "../repository/sneaker";
 import { userRepository } from "../repository/user";
 import { ServerError } from "../serverError";
 
 export class UserController {
   @catchError
   public async userRegister(req: Request, res: Response, next: NextFunction) {
-    const { firstName, lastName, email, password } = req.body;
-    let user = new User(firstName, lastName, email, password);
+    const { firstName, lastName, email, password, sneakers } = req.body;
+    let user = new User(firstName, lastName, email, password, sneakers);
     const errors: ValidationError[] = await validate(user, {
       validationError: { target: false },
     });
@@ -20,9 +22,10 @@ export class UserController {
         ERROR_MESSAGES.HTTP_BAD_REQUEST
       );
     }
+    console.log(user);
     await userRepository.save(user);
-    res["response"] = { code: 201, data: "User created successfully" };
-    next();
+    res.statusCode = 201;
+    res.send("User created successfully");
   }
 
   @catchError
@@ -40,18 +43,15 @@ export class UserController {
       );
     }
     const token = user.generateAuthToken();
-    res["response"] = {
-      code: 200,
-      data: { token },
-    };
-    next();
+    res.statusCode = 200;
+    res.send({ token });
   }
 
   @catchError
   public async userById(req: Request, res: Response, next: NextFunction) {
     const userId = parseInt(req.params.id);
     const user: User = await userRepository.findOne(userId);
-
+    const sneakers = await sneakerRepository.find("user");
     if (!user) {
       throw new ServerError(
         ERROR_CODES.HTTP_NOT_FOUND,
@@ -66,14 +66,15 @@ export class UserController {
         firstName,
         lastName,
         email,
+        sneakers,
       },
     });
   }
 
   @catchError
   public async userDetails(req: Request, res: Response, next: NextFunction) {
-    const { id, firstName, lastName, email } = req["user"];
-    const userResponse = { user: { id, firstName, lastName, email } };
+    const { id, firstName, lastName, email, sneakers } = req["user"];
+    const userResponse = { user: { id, firstName, lastName, email, sneakers } };
     res.statusCode = 200;
     res.send(userResponse);
   }
@@ -89,11 +90,8 @@ export class UserController {
       );
     }
     await userRepository.remove(user);
-    res["response"] = {
-      code: 204,
-      data: "User deleted successfully",
-    };
-    next();
+    res.statusCode = 204;
+    res.send("User deleted successfully");
   }
 
   @catchError
@@ -117,12 +115,16 @@ export class UserController {
         );
       }
     });
+    if (updates.includes("sneakers")) {
+      user.sneakers.forEach(async (sneaker: any) => {
+        const { brand, model, type, year, shoeSize } = sneaker;
+        const userSneaker = new Sneaker(brand, model, type, year, shoeSize);
+        await sneakerRepository.save(userSneaker);
+      });
+    }
     await userRepository.save(user);
-    res["response"] = {
-      code: 202,
-      data: "User updated successfully",
-    };
-    next();
+    res.statusCode = 202;
+    res.send("User updated successfully");
   }
 }
 

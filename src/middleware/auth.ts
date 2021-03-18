@@ -2,7 +2,6 @@ const jwt = require("jsonwebtoken");
 import { Request, Response } from "express";
 import { ERROR_CODES, ERROR_MESSAGES } from "../enum";
 import { userRepository } from "../repository/user";
-import { ServerError } from "../serverError";
 
 const auth = async (req: Request, res: Response, next) => {
   try {
