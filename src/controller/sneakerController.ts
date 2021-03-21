@@ -1,9 +1,9 @@
 import { ValidationError, validate } from "class-validator";
 import { NextFunction, Request, Response } from "express";
 import { catchError } from "../decorators/catchError";
-import { Sneaker } from "../entity/Sneaker";
+import { Sneaker } from "../entity/sneaker";
 import { ERROR_CODES, ERROR_MESSAGES } from "../enum";
-import { sneakerRepository } from "../repository/sneaker";
+import { sneakerRepository } from "../repository/sneakerRepository";
 import { ServerError } from "../serverError";
 
 export class SneakerController {
@@ -36,15 +36,17 @@ export class SneakerController {
       );
     }
     const { id, brand, model, type, year, shoeSize } = sneaker;
-    res.statusCode = 200;
-    res.send({
-      id,
-      brand,
-      model,
-      type,
-      year,
-      shoeSize,
-    });
+    return {
+      statusCode: 200,
+      data: {
+        id,
+        brand,
+        model,
+        type,
+        year,
+        shoeSize,
+      },
+    };
   }
 
   @catchError

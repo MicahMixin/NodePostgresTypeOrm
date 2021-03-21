@@ -1,5 +1,5 @@
-const bcrypt = require("bcryptjs");
-const jwt = require("jsonwebtoken");
+import bcrypt from "bcryptjs";
+import * as jwt from "jsonwebtoken";
 import {
   Entity,
   PrimaryGeneratedColumn,
@@ -10,7 +10,7 @@ import {
 } from "typeorm";
 import { MinLength, IsEmail, IsAlpha } from "class-validator";
 import { UserRO } from "../types";
-import { Sneaker } from "./Sneaker";
+import { Sneaker } from "./sneaker";
 
 const SALT = 8;
 

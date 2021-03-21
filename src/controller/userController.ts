@@ -1,11 +1,11 @@
 import { ValidationError, validate } from "class-validator";
 import { NextFunction, Request, Response } from "express";
 import { catchError } from "../decorators/catchError";
-import { Sneaker } from "../entity/Sneaker";
-import { User } from "../entity/User";
+import { Sneaker } from "../entity/sneaker";
+import { User } from "../entity/user";
 import { ERROR_CODES, ERROR_MESSAGES } from "../enum";
-import { sneakerRepository } from "../repository/sneaker";
-import { userRepository } from "../repository/user";
+import { sneakerRepository } from "../repository/sneakerRepository";
+import { userRepository } from "../repository/userRepository";
 import { ServerError } from "../serverError";
 
 export class UserController {

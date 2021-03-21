@@ -1,7 +1,7 @@
 import { NextFunction } from "express";
 import { ApiResponse } from "../types";
 
-const responseHandler = (req: any, res: any, next: NextFunction) => {
+export const responseHandler = (req: any, res: any, next: NextFunction) => {
   const oldSend = res.send;
   res.send = function (data) {
     res.send = oldSend;
@@ -17,5 +17,3 @@ const responseHandler = (req: any, res: any, next: NextFunction) => {
   };
   next();
 };
-
-module.exports = { responseHandler };

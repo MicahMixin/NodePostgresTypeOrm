@@ -1,4 +1,4 @@
-import { Sneaker } from "../entity/Sneaker";
+import { Sneaker } from "../entity/sneaker";
 import { BaseRepository } from "./baseRepository";
 
 export class SneakerRepository extends BaseRepository<Sneaker> {

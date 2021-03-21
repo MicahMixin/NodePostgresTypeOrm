@@ -1,4 +1,4 @@
-import { Sneaker } from "./entity/Sneaker";
+import { Sneaker } from "./entity/sneaker";
 
 export type UserRO = {
   id: number;

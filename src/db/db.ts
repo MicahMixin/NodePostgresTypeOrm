@@ -1,7 +1,7 @@
 import { Connection, createConnection } from "typeorm";
 import { dbConfig } from "../config/dbConfig";
-import { Sneaker } from "../entity/Sneaker";
-import { User } from "../entity/User";
+import { Sneaker } from "../entity/sneaker";
+import { User } from "../entity/user";
 
 export class db {
   private connection: Connection = null;

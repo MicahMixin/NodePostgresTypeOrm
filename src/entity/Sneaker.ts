@@ -1,6 +1,6 @@
 import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from "typeorm";
 import { IsAlpha, IsAlphanumeric, IsNumber } from "class-validator";
-import { User } from "./User";
+import { User } from "./user";
 
 @Entity()
 export class Sneaker {

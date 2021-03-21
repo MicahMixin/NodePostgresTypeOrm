@@ -1,4 +1,4 @@
-import { User } from "../entity/User";
+import { User } from "../entity/user";
 import { BaseRepository } from "./baseRepository";
 
 export class UserRepository extends BaseRepository<User> {

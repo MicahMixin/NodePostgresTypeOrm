@@ -1,7 +1,7 @@
-const express = require("express");
-const appRouter = require("./routers/index");
-const { responseHandler } = require("./middleware/responseHandler");
-const { errorHandler } = require("./middleware/errorHandler");
+import * as express from "express";
+import { appRouter } from "./routers/index";
+import { responseHandler } from "./middleware/responseHandler";
+import { errorHandler } from "./middleware/errorHandler";
 require("dotenv").config();
 
 import "reflect-metadata";
