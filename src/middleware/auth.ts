@@ -1,13 +1,13 @@
 import * as jwt from "jsonwebtoken";
 import { Request, Response } from "express";
 import { ERROR_CODES, ERROR_MESSAGES } from "../enum";
-import { userRepository } from "../repository/userRepository";
+import { userService } from "../service/userService";
 
 export const auth = async (req: Request, res: Response, next) => {
   try {
     const token = req.header("Authorization").replace("Bearer ", "");
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
-    const user = await userRepository.findOne({ id: decoded.id });
+    const user = await userService.findOne({ id: decoded.id });
     req["user"] = user;
     next();
   } catch (error) {

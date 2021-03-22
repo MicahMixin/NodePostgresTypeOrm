@@ -4,10 +4,13 @@ export const catchError = (target, key, descriptor) => {
   const fn = descriptor.value;
   descriptor.value = async (...args) => {
     try {
-      await fn.apply(this, args);
+      const { statusCode, data } = await fn.apply(this, args);
+      const [req, res, next] = args;
+      res.statusCode = statusCode;
+      res.send(data);
     } catch (error: any) {
       const [req, res, next] = args;
-      res.statusCode = error.statusCode ?? ERROR_CODES.HTTP_SERVER_ERROR;
+      res.statusCode = error.statusCode ?? ERROR_CODES.HTTP_BAD_REQUEST;
       res.send(error.message);
     }
   };

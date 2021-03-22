@@ -16,4 +16,10 @@ userRouter.delete("/users/:id(\\d+)", auth, userController.deleteUserById);
 
 userRouter.patch("/users/:id(\\d+)", auth, userController.updateUserById);
 
+userRouter.patch(
+  "/users/:id(\\d+)/sneakers",
+  auth,
+  userController.addSneakersForUser
+);
+
 export default userRouter;
