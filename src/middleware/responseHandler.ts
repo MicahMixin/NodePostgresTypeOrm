@@ -1,5 +1,6 @@
 import { NextFunction } from "express";
 import { ApiResponse } from "../types";
+import { logger } from "../utils/logger";
 
 export const responseHandler = (req: any, res: any, next: NextFunction) => {
   const oldSend = res.send;
@@ -13,6 +14,10 @@ export const responseHandler = (req: any, res: any, next: NextFunction) => {
       error: isSuccess ? "" : data,
       version,
     };
+    logger.log({
+      level: isSuccess ? "info" : "error",
+      message: JSON.stringify(data),
+    });
     return res.send(response);
   };
   next();

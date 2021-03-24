@@ -6,5 +6,3 @@ export const appRouter = express();
 
 appRouter.use(userRouter);
 appRouter.use(sneakersRouter);
-
-// module.exports = appRouter;

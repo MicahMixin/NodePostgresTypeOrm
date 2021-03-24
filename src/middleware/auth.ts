@@ -2,6 +2,7 @@ import * as jwt from "jsonwebtoken";
 import { Request, Response } from "express";
 import { ERROR_CODES, ERROR_MESSAGES } from "../enum";
 import { userService } from "../service/userService";
+import { logger } from "../utils/logger";
 
 export const auth = async (req: Request, res: Response, next) => {
   try {
@@ -9,6 +10,10 @@ export const auth = async (req: Request, res: Response, next) => {
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
     const user = await userService.findOne({ id: decoded.id });
     req["user"] = user;
+    logger.log({
+      level: "info",
+      message: `User authenticated successfully`,
+    });
     next();
   } catch (error) {
     res.statusCode = ERROR_CODES.HTTP_UNAUTHORIZED;

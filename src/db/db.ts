@@ -2,6 +2,7 @@ import { Connection, createConnection } from "typeorm";
 import { dbConfig } from "../config/dbConfig";
 import { Sneaker } from "../entity/sneaker";
 import { User } from "../entity/user";
+import { logger } from "../utils/logger";
 
 export class db {
   private connection: Connection = null;
@@ -28,6 +29,10 @@ export class db {
     })
       .then((connection: Connection) => {
         console.log("connected to POSTGRES (burp) ספערגטסופ");
+        logger.log({
+          level: "info",
+          message: `connected to POSTGRES (burp) ספערגטסופ`,
+        });
         // here you can start to work with your entities
         this.connection = connection;
       })

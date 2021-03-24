@@ -32,7 +32,6 @@ export class SneakerService extends BaseService<SneakerRepository> {
 
     await queryRunner.connect();
     await queryRunner.startTransaction();
-
     try {
       Promise.all(sneakers).then(async (values) => {
         await queryRunner.manager.save(sneakers);
