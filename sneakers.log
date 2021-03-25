@@ -1,16 +1,21 @@
 info: Server is up on port 4000
 info: connected to POSTGRES (burp) ספערגטסופ
-info: {"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZmlyc3ROYW1lIjoiSm9obiIsImxhc3ROYW1lIjoiQWRhbXMiLCJlbWFpbCI6ImpvaG5hZGFtc0BnbWFpbC5jb20iLCJpYXQiOjE2MTY1ODI1MTl9.I5xPiIw1fuWVl583zs1BGoFO7zR6K5N_4jx4ymPJCXY"}
 info: User authenticated successfully
-info: {"user":{"id":2,"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com"}}
-info: User authenticated successfully
-info: {"user":{"id":2,"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com"}}
-error: "Invalid token"
+info: "media\\2fa85e1186db2e5406d2f736b2424228"
 info: Server is up on port 4000
 info: connected to POSTGRES (burp) ספערגטסופ
-error: "Invalid token"
-error: "Invalid token"
 info: User authenticated successfully
-info: {"user":{"id":2,"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com"}}
+info: "media\\91c0a5e3461cd185b1499f01f5af7c77"
+info: Server is up on port 4000
+info: connected to POSTGRES (burp) ספערגטסופ
+info: Server is up on port 4000
+info: connected to POSTGRES (burp) ספערגטסופ
 info: User authenticated successfully
-error: "Resource not found"
+info: "media\\1616670214816.png"
+info: User authenticated successfully
+info: "media\\1616670243174.png"
+info: User authenticated successfully
+error: File must be an image
+error: {"storageErrors":[]}
+info: Server is up on port 4000
+info: connected to POSTGRES (burp) ספערגטסופ

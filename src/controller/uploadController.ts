@@ -1,14 +1,16 @@
 import { Request, Response, NextFunction } from "express";
-import * as sharp from "sharp";
+import { catchError } from "../decorators/catchError";
+import { HttpResponse } from "../interfaces/responseInterface";
 
 export class UploadController {
+  @catchError
   public async uploadMedia(req: any, res: Response, next: NextFunction) {
-    const buffer = await sharp(req.file.buffer)
-      .resize({ width: 250, height: 250 })
-      .png()
-      .toBuffer();
-    req.user.avatar = buffer;
-    await req.user.save();
-    res.send();
+    const response: HttpResponse = {
+      statusCode: 200,
+      data: req.file.path,
+    };
+    return response;
   }
 }
+
+export const uploadController = new UploadController();

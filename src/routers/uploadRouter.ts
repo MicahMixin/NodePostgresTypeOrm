@@ -1,13 +1,10 @@
 import * as express from "express";
+import { uploadController } from "../controller/uploadController";
 import { auth } from "../middleware/auth";
-import { NextFunction, Request, Response } from "express";
+import { upload } from "../utils/upload";
 
-const router = express();
+const uploadRouter = express();
 
-router.post(
-  "/upload",
-  auth,
-  async (req: Request, res: Response, next: NextFunction) => {}
-);
+uploadRouter.post("/upload", auth, upload, uploadController.uploadMedia);
 
-module.exports = router;
+export default uploadRouter;

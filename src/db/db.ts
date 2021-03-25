@@ -37,7 +37,6 @@ export class db {
         this.connection = connection;
       })
       .catch((error) => {
-        console.log(error);
         return error;
       });
   };

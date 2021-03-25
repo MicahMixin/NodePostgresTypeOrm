@@ -1,4 +1,2 @@
-error: "Invalid token"
-error: "Invalid token"
-error: "Invalid token"
-error: "Resource not found"
+error: File must be an image
+error: {"storageErrors":[]}
