@@ -1,7 +1,6 @@
 import { Sneaker } from "../entity/sneaker";
 import { BaseService as BaseService } from "./baseService";
 import { SneakerRepository } from "../repository/sneakerRepository";
-import { catchError } from "../decorators/catchError";
 import { getManager } from "typeorm";
 
 export class SneakerService extends BaseService<SneakerRepository> {
@@ -23,7 +22,6 @@ export class SneakerService extends BaseService<SneakerRepository> {
     });
   }
 
-  @catchError
   public async transaction(sneakers: Sneaker[]) {
     await getManager().transaction(async (transactionalEntityManager) => {
       await transactionalEntityManager.save(sneakers);

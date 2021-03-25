@@ -1,4 +1,10 @@
-import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from "typeorm";
+import {
+  Entity,
+  PrimaryGeneratedColumn,
+  Column,
+  ManyToOne,
+  JoinColumn,
+} from "typeorm";
 import { IsAlpha, IsAlphanumeric, IsNumber } from "class-validator";
 import { User } from "./user";
 
@@ -39,12 +45,14 @@ export class Sneaker {
     type: string,
     model: string,
     year: string,
-    shoeSize: number
+    shoeSize: number,
+    user: User
   ) {
     this.brand = brand;
     this.type = type;
     this.model = model;
     this.year = year;
     this.shoeSize = shoeSize;
+    this.user = user;
   }
 }

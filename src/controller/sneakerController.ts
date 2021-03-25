@@ -6,12 +6,13 @@ import { ERROR_CODES, ERROR_MESSAGES } from "../enum";
 import { sneakerService } from "../service/sneakerService";
 import { ServerError } from "../serverError";
 import { HttpResponse } from "../interfaces/responseInterface";
+import { userService } from "../service/userService";
 
 export class SneakerController {
   @catchError
   public async addNewSneaker(req: Request, res: Response, next: NextFunction) {
-    const { brand, type, model, year, shoeSize } = req.body;
-    let sneaker = new Sneaker(brand, type, model, year, shoeSize);
+    const { brand, type, model, year, shoeSize, user } = req.body;
+    let sneaker = new Sneaker(brand, type, model, year, shoeSize, user);
     const errors: ValidationError[] = await validate(sneaker, {
       validationError: { target: false },
     });
@@ -33,6 +34,8 @@ export class SneakerController {
   public async getSneakerById(req: Request, res: Response, next: NextFunction) {
     const sneakerId = parseInt(req.params.id);
     const sneaker: Sneaker = await sneakerService.findOne(sneakerId);
+    const users = await userService.find("sneakers");
+    const user = users[0];
     if (!sneaker) {
       throw new ServerError(
         ERROR_CODES.HTTP_NOT_FOUND,
@@ -40,6 +43,12 @@ export class SneakerController {
       );
     }
     const { id, brand, model, type, year, shoeSize } = sneaker;
+    const userResponse = {
+      id: user.id,
+      firstName: user.firstName,
+      lastName: user.lastName,
+      email: user.email,
+    };
     const response: HttpResponse = {
       statusCode: 200,
       data: {
@@ -49,6 +58,7 @@ export class SneakerController {
         type,
         year,
         shoeSize,
+        user: userResponse,
       },
     };
     return response;
@@ -70,7 +80,14 @@ export class SneakerController {
         ERROR_MESSAGES.HTTP_NOT_FOUND
       );
     }
-    const { id, brand, model, type, year, shoeSize } = sneaker;
+    const { id, brand, model, type, year, shoeSize, user } = sneaker;
+    const { firstName, lastName, email } = user;
+    const userResponse = {
+      id: user.id,
+      firstName,
+      lastName,
+      email,
+    };
     const response: HttpResponse = {
       statusCode: 200,
       data: {
@@ -80,6 +97,7 @@ export class SneakerController {
         type,
         year,
         shoeSize,
+        user: userResponse,
       },
     };
     return response;

@@ -7,6 +7,7 @@ import {
   BeforeInsert,
   BeforeUpdate,
   OneToMany,
+  JoinColumn,
 } from "typeorm";
 import { MinLength, IsEmail, IsAlpha } from "class-validator";
 import { UserRO } from "../types";
@@ -60,7 +61,6 @@ export class User {
       email,
       sneakers,
     };
-
     return responseObject;
   }
 

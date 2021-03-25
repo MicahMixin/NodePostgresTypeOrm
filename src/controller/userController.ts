@@ -64,16 +64,21 @@ export class UserController {
         ERROR_MESSAGES.HTTP_NOT_FOUND
       );
     }
-    const { id, firstName, lastName, email } = user;
+    let userSneakers = [];
+    sneakers.forEach((sneaker: Sneaker) => {
+      const { id, brand, model, type, year, shoeSize } = sneaker;
+      userSneakers.push({ id, brand, model, type, year, shoeSize });
+    });
+    const { firstName, lastName, email } = user;
     const response: HttpResponse = {
       statusCode: 200,
       data: {
         user: {
-          id,
+          id: user.id,
           firstName,
           lastName,
           email,
-          sneakers,
+          sneakers: userSneakers,
         },
       },
     };
@@ -129,7 +134,14 @@ export class UserController {
       const { sneakers } = req.body;
       sneakers.forEach(async (sneaker: any) => {
         const { brand, model, type, year, shoeSize } = sneaker;
-        const userSneaker = new Sneaker(brand, model, type, year, shoeSize);
+        const userSneaker = new Sneaker(
+          brand,
+          model,
+          type,
+          year,
+          shoeSize,
+          user
+        );
         sneakersArr.push(userSneaker);
       });
       await sneakerService.transaction(sneakersArr);
@@ -165,7 +177,14 @@ export class UserController {
     if (updates.includes("sneakers")) {
       user.sneakers.forEach(async (sneaker: any) => {
         const { brand, model, type, year, shoeSize } = sneaker;
-        const userSneaker = new Sneaker(brand, model, type, year, shoeSize);
+        const userSneaker = new Sneaker(
+          brand,
+          model,
+          type,
+          year,
+          shoeSize,
+          user
+        );
         await sneakerService.save(userSneaker);
       });
     }

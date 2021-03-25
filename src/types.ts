@@ -5,7 +5,7 @@ export type UserRO = {
   firstName: string;
   lastName: string;
   email: string;
-  sneakers: Sneaker[];
+  sneakers?: Sneaker[];
 };
 
 export type ApiResponse = {

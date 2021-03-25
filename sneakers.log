@@ -19,3 +19,318 @@ error: File must be an image
 error: {"storageErrors":[]}
 info: Server is up on port 4000
 info: connected to POSTGRES (burp) ספערגטסופ
+info: Server is up on port 4000
+info: connected to POSTGRES (burp) ספערגטסופ
+info: User authenticated successfully
+info: "media\\1616671743859.png"
+info: User authenticated successfully
+info: "media\\1616672750593.png"
+info: Server is up on port 4000
+info: connected to POSTGRES (burp) ספערגטסופ
+error: "Invalid token"
+info: {"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZmlyc3ROYW1lIjoiSm9obiIsImxhc3ROYW1lIjoiQWRhbXMiLCJlbWFpbCI6ImpvaG5hZGFtc0BnbWFpbC5jb20iLCJpYXQiOjE2MTY2NzQxNDV9.04gCoTg3DyKgPbhQXUW1onrm4QMiYPj7qjICfuRp458"}
+info: User authenticated successfully
+info: "User deleted successfully"
+info: "User created successfully"
+info: {"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZmlyc3ROYW1lIjoiSm9obiIsImxhc3ROYW1lIjoiQWRhbXMiLCJlbWFpbCI6ImpvaG5hZGFtc0BnbWFpbC5jb20iLCJpYXQiOjE2MTY2NzQxNzV9.W7rc9kcaE1KuyHNB9Z-pHq2u9hsZag8tZcQTLIPIQlI"}
+info: User authenticated successfully
+error: "Resource not found"
+info: User authenticated successfully
+info: {"user":{"id":3,"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com"}}
+info: User authenticated successfully
+error: "Cannot set property 'statusCode' of undefined"
+info: User authenticated successfully
+error: "Cannot set property 'statusCode' of undefined"
+info: User authenticated successfully
+error: "Cannot set property 'statusCode' of undefined"
+info: User authenticated successfully
+error: "Cannot set property 'statusCode' of undefined"
+info: User authenticated successfully
+info: {"user":{"id":3,"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com","sneakers":[{"brand":"Nike","type":"AirJordan1S","model":"Sports","year":"2017","shoeSize":45,"user":null,"id":2},{"brand":"Nike","type":"AirJordan1S","model":"Sports","year":"2017","shoeSize":45,"user":null,"id":3},{"brand":"Adidas","type":"Sports","model":"MJAMMHED","year":"2018","shoeSize":45,"user":null,"id":5},{"brand":"Adidas","type":"MJAMMHED","model":"Sports","year":"2018","shoeSize":45,"user":null,"id":6},{"brand":"Nike","type":"Very cheap shoes","model":"Running","year":"2017","shoeSize":42,"user":null,"id":7},{"brand":"Nike","type":"Deep break type","model":"Running","year":"2017","shoeSize":42,"user":null,"id":9},{"brand":"Nike","type":"Cheap shoes","model":"Sports","year":"2017","shoeSize":42,"user":null,"id":8},{"brand":"Nike","type":"Cheap shoes","model":"Sports","year":"2017","shoeSize":42,"user":null,"id":10},{"brand":"Nike","type":"Very cheap shoes","model":"Running","year":"2017","shoeSize":42,"user":null,"id":11},{"brand":"Nike","type":"Deep break type","model":"Running","year":"2013","shoeSize":42,"user":null,"id":12},{"brand":"Adidas","type":"Cheap shoes","model":"Sports","year":"2017","shoeSize":42,"user":null,"id":13},{"brand":"Fila","type":"Very cheap shoes","model":"Running","year":"2017","shoeSize":42,"user":null,"id":14},{"brand":"Fila","type":"Very cheap shoes123123","model":"Running","year":"2019","shoeSize":42,"user":null,"id":15},{"brand":"Fila","type":"Very cheap shoes123123","model":"Running","year":"2019","shoeSize":42,"user":null,"id":16},{"brand":"Fila","type":"Very cheap shoes123123","model":"Running","year":"2019","shoeSize":42,"user":null,"id":17},{"brand":"Fila","type":"Very cheap shoes123123","model":"Running","year":"2019","shoeSize":42,"user":null,"id":18},{"brand":"New Balance","type":"Very cheap shoes123123","model":"Running","year":"2019","shoeSize":42,"user":null,"id":19},{"brand":"New Balance","type":"Very cheap shoes123123","model":"Running","year":"2019","shoeSize":42,"user":null,"id":20},{"brand":"New Balance","type":"Very cheap shoes123123","model":"Running","year":"2019","shoeSize":42,"user":null,"id":21},{"brand":"Sucony34414","type":"Cheap shoes12313f","model":"Sports","year":"2019","shoeSize":45,"user":null,"id":22},{"brand":"Sucony34414","type":"Cheap shoes12313f","model":"Sports","year":"2019","shoeSize":45,"user":null,"id":23},{"brand":"Sucony34414111sd1ddd","type":"Cheap shoes12313f","model":"Sports","year":"2019","shoeSize":45,"user":null,"id":24},{"brand":"New Balance Fake SHOES","type":"Very cheap shoes123123","model":"Running like an idiot","year":"2019","shoeSize":45,"user":null,"id":25},{"brand":"he5ehh","type":"Cheap shoes12313f","model":"Sports","year":"2019","shoeSize":43,"user":null,"id":26},{"brand":"dhSHOES","type":"Very cheap shoes123123","model":"Running like an idiot","year":"2019","shoeSize":45,"user":null,"id":27},{"brand":"Chnir!","type":"Cheap shoes12313f","model":"Sports","year":"2019","shoeSize":46,"user":{"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com","password":"$2a$08$O5MxG9naTdBuwfbutoFwdOFCqvCkH70284hLTfxvP05qdaAA6jghW","id":3},"id":28},{"brand":"Chnir","type":"Very cheap shoes123123","model":"Running like an idiot","year":"2019","shoeSize":45,"user":{"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com","password":"$2a$08$O5MxG9naTdBuwfbutoFwdOFCqvCkH70284hLTfxvP05qdaAA6jghW","id":3},"id":29},{"brand":"Chnir!","type":"Cheap shoes12313f","model":"Sports","year":"2019","shoeSize":46,"user":{"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com","password":"$2a$08$O5MxG9naTdBuwfbutoFwdOFCqvCkH70284hLTfxvP05qdaAA6jghW","id":3},"id":30},{"brand":"Chnir","type":"Very cheap shoes123123","model":"Running like an idiot","year":"2019","shoeSize":45,"user":{"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com","password":"$2a$08$O5MxG9naTdBuwfbutoFwdOFCqvCkH70284hLTfxvP05qdaAA6jghW","id":3},"id":31},{"brand":"Chnir!","type":"Cheap shoes12313f","model":"Sports","year":"2019","shoeSize":46,"user":{"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com","password":"$2a$08$O5MxG9naTdBuwfbutoFwdOFCqvCkH70284hLTfxvP05qdaAA6jghW","id":3},"id":32},{"brand":"Chnir","type":"Very cheap shoes123123","model":"Running like an idiot","year":"2019","shoeSize":45,"user":{"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com","password":"$2a$08$O5MxG9naTdBuwfbutoFwdOFCqvCkH70284hLTfxvP05qdaAA6jghW","id":3},"id":33}]}}
+info: Server is up on port 4000
+info: connected to POSTGRES (burp) ספערגטסופ
+info: "User created successfully"
+info: {"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZmlyc3ROYW1lIjoiSm9obiIsImxhc3ROYW1lIjoiQWRhbXMiLCJlbWFpbCI6ImpvaG5hZGFtc0BnbWFpbC5jb20iLCJpYXQiOjE2MTY2Nzk2MTN9.g1O-1pkaEV_1p18Xheb7cNnuUaPP_Iklchehulrxp04"}
+info: User authenticated successfully
+info: {"user":{"id":1,"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com"}}
+info: User authenticated successfully
+error: "Resource not found"
+info: User authenticated successfully
+info: {"user":{"id":1,"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com","sneakers":[]}}
+info: User authenticated successfully
+error: "Cannot set property 'statusCode' of undefined"
+info: User authenticated successfully
+error: "Cannot set property 'statusCode' of undefined"
+info: Server is up on port 4000
+info: connected to POSTGRES (burp) ספערגטסופ
+info: User authenticated successfully
+error: "Cannot set property 'statusCode' of undefined"
+info: User authenticated successfully
+error: "Cannot set property 'statusCode' of undefined"
+info: User authenticated successfully
+info: {"user":{"id":1,"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com","sneakers":[{"brand":"Chnir!","type":"Cheap shoes12313f","model":"Sports","year":"2019","shoeSize":46,"id":1,"user":{"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com","password":"$2a$08$0qTSbktSweASMA1ayac5T.75BvsQJpT5MLUplxlIZcy07LUF2bgwK","id":1}},{"brand":"Chnir","type":"Very cheap shoes123123","model":"Running like an idiot","year":"2019","shoeSize":45,"id":2,"user":{"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com","password":"$2a$08$0qTSbktSweASMA1ayac5T.75BvsQJpT5MLUplxlIZcy07LUF2bgwK","id":1}},{"brand":"Chnir!","type":"Cheap shoes12313f","model":"Sports","year":"2019","shoeSize":46,"id":3,"user":{"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com","password":"$2a$08$0qTSbktSweASMA1ayac5T.75BvsQJpT5MLUplxlIZcy07LUF2bgwK","id":1}},{"brand":"Chnir","type":"Very cheap shoes123123","model":"Running like an idiot","year":"2019","shoeSize":45,"id":4,"user":{"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com","password":"$2a$08$0qTSbktSweASMA1ayac5T.75BvsQJpT5MLUplxlIZcy07LUF2bgwK","id":1}},{"brand":"Chnir!","type":"Cheap shoes12313f","model":"Sports","year":"2019","shoeSize":46,"id":5,"user":null},{"brand":"Chnir","type":"Very cheap shoes123123","model":"Running like an idiot","year":"2019","shoeSize":45,"id":6,"user":null},{"brand":"Chnir!","type":"Cheap shoes12313f","model":"Sports","year":"2019","shoeSize":46,"id":7,"user":null},{"brand":"Chnir","type":"Very cheap shoes123123","model":"Running like an idiot","year":"2019","shoeSize":45,"id":8,"user":null}]}}
+info: User authenticated successfully
+info: "Sneaker updated successfully"
+info: User authenticated successfully
+info: "Sneaker deleted successfully"
+info: User authenticated successfully
+info: "Sneaker deleted successfully"
+info: User authenticated successfully
+info: "Sneaker deleted successfully"
+info: User authenticated successfully
+info: "Sneaker deleted successfully"
+info: User authenticated successfully
+info: "Sneaker deleted successfully"
+info: User authenticated successfully
+error: "Resource not found"
+info: User authenticated successfully
+info: {"user":{"id":1,"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com","sneakers":[{"brand":"Chnir","type":"Very cheap shoes123123","model":"Running like an idiot","year":"2019","shoeSize":45,"id":6,"user":null},{"brand":"Chnir!","type":"Cheap shoes12313f","model":"Sports","year":"2019","shoeSize":46,"id":7,"user":null},{"brand":"Chnir","type":"Very cheap shoes123123","model":"Running like an idiot","year":"2019","shoeSize":45,"id":8,"user":null}]}}
+info: User authenticated successfully
+info: "Sneaker deleted successfully"
+info: User authenticated successfully
+info: "Sneaker deleted successfully"
+info: User authenticated successfully
+info: {"user":{"id":1,"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com","sneakers":[{"brand":"Chnir","type":"Very cheap shoes123123","model":"Running like an idiot","year":"2019","shoeSize":45,"id":8,"user":null}]}}
+info: User authenticated successfully
+info: "Sneaker deleted successfully"
+info: User authenticated successfully
+info: {"user":{"id":1,"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com","sneakers":[]}}
+info: User authenticated successfully
+error: "Cannot set property 'statusCode' of undefined"
+info: User authenticated successfully
+info: {"user":{"id":1,"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com","sneakers":[{"brand":"Chnir!","type":"Cheap shoes12313f","model":"Sports","year":"2019","shoeSize":46,"id":9,"user":null},{"brand":"Chnir","type":"Very cheap shoes123123","model":"Running like an idiot","year":"2019","shoeSize":45,"id":10,"user":null}]}}
+info: Server is up on port 4000
+info: connected to POSTGRES (burp) ספערגטסופ
+info: Server is up on port 4000
+info: connected to POSTGRES (burp) ספערגטסופ
+info: User authenticated successfully
+info: "Sneaker deleted successfully"
+info: User authenticated successfully
+info: "Sneaker deleted successfully"
+info: User authenticated successfully
+info: {"user":{"id":1,"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com","sneakers":[]}}
+info: User authenticated successfully
+error: "Cannot set property 'statusCode' of undefined"
+info: User authenticated successfully
+info: {"user":{"id":1,"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com","sneakers":[{"brand":"Chnir!","type":"Cheap shoes12313f","model":"Sports","year":"2019","shoeSize":46,"user":null,"id":11},{"brand":"Chnir","type":"Very cheap shoes123123","model":"Running like an idiot","year":"2019","shoeSize":45,"user":null,"id":12}]}}
+info: Server is up on port 4000
+info: connected to POSTGRES (burp) ספערגטסופ
+error: "Invalid token"
+info: User authenticated successfully
+error: "Cannot set property 'statusCode' of undefined"
+info: User authenticated successfully
+info: "User updated successfully"
+info: User authenticated successfully
+info: {"user":{"id":1,"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com","sneakers":[{"brand":"Chnir!","type":"Cheap shoes12313f","model":"Sports","year":"2019","shoeSize":46,"user":null,"id":13},{"brand":"Chnir","type":"Very cheap shoes123123","model":"Running like an idiot","year":"2019","shoeSize":45,"user":null,"id":14},{"brand":"Chnir!","type":"Cheap shoes12313f","model":"Sports","year":"2019","shoeSize":46,"user":{"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com","password":"$2a$08$0qTSbktSweASMA1ayac5T.75BvsQJpT5MLUplxlIZcy07LUF2bgwK","id":1},"id":11},{"brand":"Chnir","type":"Very cheap shoes123123","model":"Running like an idiot","year":"2019","shoeSize":45,"user":{"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com","password":"$2a$08$0qTSbktSweASMA1ayac5T.75BvsQJpT5MLUplxlIZcy07LUF2bgwK","id":1},"id":12},{"brand":"Chnir","type":"Running like an idiot","model":"Very cheap shoes123123","year":"2019","shoeSize":45,"user":{"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com","password":"$2a$08$0qTSbktSweASMA1ayac5T.75BvsQJpT5MLUplxlIZcy07LUF2bgwK","id":1},"id":15},{"brand":"Chnir!","type":"Sports","model":"Cheap shoes12313f","year":"2019","shoeSize":46,"user":{"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com","password":"$2a$08$0qTSbktSweASMA1ayac5T.75BvsQJpT5MLUplxlIZcy07LUF2bgwK","id":1},"id":16}]}}
+info: Server is up on port 4000
+info: connected to POSTGRES (burp) ספערגטסופ
+info: User authenticated successfully
+error: "Relation \"user\" was not found; please check if it is correct and really exists in your entity."
+info: Server is up on port 4000
+info: Server is up on port 4000
+info: Server is up on port 4000
+error: "Invalid token"
+error: "Invalid token"
+error: "Invalid token"
+info: Server is up on port 4000
+error: "Invalid token"
+error: "Invalid token"
+error: "Cannot read property 'getCustomRepository' of null"
+info: Server is up on port 4000
+info: connected to POSTGRES (burp) ספערגטסופ
+info: {"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZmlyc3ROYW1lIjoiSm9obiIsImxhc3ROYW1lIjoiQWRhbXMiLCJlbWFpbCI6ImpvaG5hZGFtc0BnbWFpbC5jb20iLCJpYXQiOjE2MTY2ODE4ODF9.vRXUhw8_NAmcRWyPn8LtFAo_v14WZVtsoa0dUEYjMJQ"}
+info: User authenticated successfully
+info: "User updated successfully"
+info: User authenticated successfully
+info: {"user":{"id":1,"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com","sneakers":[{"brand":"Chnir!","type":"Cheap shoes12313f","model":"Sports","year":"2019","shoeSize":46,"user":null,"id":13},{"brand":"Chnir","type":"Very cheap shoes123123","model":"Running like an idiot","year":"2019","shoeSize":45,"user":null,"id":14},{"brand":"Chnir!","type":"Cheap shoes12313f","model":"Sports","year":"2019","shoeSize":46,"user":{"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com","password":"$2a$08$0qTSbktSweASMA1ayac5T.75BvsQJpT5MLUplxlIZcy07LUF2bgwK","id":1},"id":11},{"brand":"Chnir","type":"Very cheap shoes123123","model":"Running like an idiot","year":"2019","shoeSize":45,"user":{"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com","password":"$2a$08$0qTSbktSweASMA1ayac5T.75BvsQJpT5MLUplxlIZcy07LUF2bgwK","id":1},"id":12},{"brand":"Chnir","type":"Running like an idiot","model":"Very cheap shoes123123","year":"2019","shoeSize":45,"user":null,"id":15},{"brand":"Chnir!","type":"Sports","model":"Cheap shoes12313f","year":"2019","shoeSize":46,"user":null,"id":16},{"brand":"Chnir!","type":"Sports","model":"Cheap shoes12313f","year":"2019","shoeSize":46,"user":{"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com","password":"$2a$08$0qTSbktSweASMA1ayac5T.75BvsQJpT5MLUplxlIZcy07LUF2bgwK","id":1},"id":17},{"brand":"Chnir","type":"Running like an idiot","model":"Very cheap shoes123123","year":"2019","shoeSize":45,"user":{"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com","password":"$2a$08$0qTSbktSweASMA1ayac5T.75BvsQJpT5MLUplxlIZcy07LUF2bgwK","id":1},"id":18}]}}
+info: User authenticated successfully
+error: "relation \"sneaker\" does not exist"
+info: User authenticated successfully
+error: "relation \"sneaker\" does not exist"
+info: User authenticated successfully
+error: "relation \"sneaker\" does not exist"
+info: User authenticated successfully
+error: "relation \"sneaker\" does not exist"
+info: Server is up on port 4000
+info: connected to POSTGRES (burp) ספערגטסופ
+info: User authenticated successfully
+info: {"user":{"id":1,"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com","sneakers":[]}}
+info: User authenticated successfully
+info: "User updated successfully"
+info: User authenticated successfully
+info: {"user":{"id":1,"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com","sneakers":[{"brand":"Chnir!","type":"Sports","model":"Cheap shoes12313f","year":"2019","shoeSize":46,"id":1,"user":null},{"brand":"Chnir","type":"Running like an idiot","model":"Very cheap shoes123123","year":"2019","shoeSize":45,"id":2,"user":null}]}}
+info: Server is up on port 4000
+info: connected to POSTGRES (burp) ספערגטסופ
+info: User authenticated successfully
+error: "Resource not found"
+info: User authenticated successfully
+error: "Resource not found"
+info: User authenticated successfully
+error: "Resource not found"
+info: User authenticated successfully
+info: "Sneaker deleted successfully"
+info: User authenticated successfully
+info: "Sneaker deleted successfully"
+info: User authenticated successfully
+error: "Resource not found"
+info: User authenticated successfully
+info: {"user":{"id":1,"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com","sneakers":[]}}
+info: User authenticated successfully
+info: {"user":{"id":1,"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com"}}
+info: User authenticated successfully
+info: {"user":{"id":1,"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com","sneakers":[]}}
+info: User authenticated successfully
+error: "Cannot set property 'statusCode' of undefined"
+info: User authenticated successfully
+info: {"user":{"id":1,"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com","sneakers":[{"brand":"Chnir!","type":"Cheap shoes12313f","model":"Sports","year":"2019","shoeSize":46,"user":{"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com","password":"$2a$08$0qTSbktSweASMA1ayac5T.75BvsQJpT5MLUplxlIZcy07LUF2bgwK","id":1},"id":3},{"brand":"Chnir","type":"Very cheap shoes123123","model":"Running like an idiot","year":"2019","shoeSize":45,"user":{"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com","password":"$2a$08$0qTSbktSweASMA1ayac5T.75BvsQJpT5MLUplxlIZcy07LUF2bgwK","id":1},"id":4}]}}
+info: Server is up on port 4000
+info: connected to POSTGRES (burp) ספערגטסופ
+info: User authenticated successfully
+error: "Cannot set property 'statusCode' of undefined"
+info: Server is up on port 4000
+info: connected to POSTGRES (burp) ספערגטסופ
+info: Server is up on port 4000
+info: connected to POSTGRES (burp) ספערגטסופ
+info: User authenticated successfully
+error: "Cannot set property 'statusCode' of undefined"
+info: Server is up on port 4000
+info: connected to POSTGRES (burp) ספערגטסופ
+info: User authenticated successfully
+error: "Cannot set property 'statusCode' of undefined"
+info: Server is up on port 4000
+info: connected to POSTGRES (burp) ספערגטסופ
+info: Server is up on port 4000
+info: connected to POSTGRES (burp) ספערגטסופ
+info: User authenticated successfully
+error: "Cannot set property 'statusCode' of undefined"
+info: Server is up on port 4000
+info: connected to POSTGRES (burp) ספערגטסופ
+info: User authenticated successfully
+error: "Cannot set property 'statusCode' of undefined"
+info: Server is up on port 4000
+info: connected to POSTGRES (burp) ספערגטסופ
+info: User authenticated successfully
+error: "Cannot set property 'statusCode' of undefined"
+info: Server is up on port 4000
+info: connected to POSTGRES (burp) ספערגטסופ
+info: Server is up on port 4000
+info: connected to POSTGRES (burp) ספערגטסופ
+info: User authenticated successfully
+info: "Sneakers added to user successfully"
+info: User authenticated successfully
+info: {"user":{"id":1,"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com","sneakers":[{"brand":"Chnir!","type":"Cheap shoes12313f","model":"Sports","year":"2019","shoeSize":46,"user":{"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com","password":"$2a$08$0qTSbktSweASMA1ayac5T.75BvsQJpT5MLUplxlIZcy07LUF2bgwK","id":1},"id":3},{"brand":"Chnir","type":"Very cheap shoes123123","model":"Running like an idiot","year":"2019","shoeSize":45,"user":{"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com","password":"$2a$08$0qTSbktSweASMA1ayac5T.75BvsQJpT5MLUplxlIZcy07LUF2bgwK","id":1},"id":4},{"brand":"Chnir!","type":"Cheap shoes12313f","model":"Sports","year":"2019","shoeSize":46,"user":{"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com","password":"$2a$08$0qTSbktSweASMA1ayac5T.75BvsQJpT5MLUplxlIZcy07LUF2bgwK","id":1},"id":5},{"brand":"Chnir","type":"Very cheap shoes123123","model":"Running like an idiot","year":"2019","shoeSize":45,"user":{"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com","password":"$2a$08$0qTSbktSweASMA1ayac5T.75BvsQJpT5MLUplxlIZcy07LUF2bgwK","id":1},"id":6},{"brand":"Chnir!","type":"Cheap shoes12313f","model":"Sports","year":"2019","shoeSize":46,"user":{"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com","password":"$2a$08$0qTSbktSweASMA1ayac5T.75BvsQJpT5MLUplxlIZcy07LUF2bgwK","id":1},"id":7},{"brand":"Chnir","type":"Very cheap shoes123123","model":"Running like an idiot","year":"2019","shoeSize":45,"user":{"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com","password":"$2a$08$0qTSbktSweASMA1ayac5T.75BvsQJpT5MLUplxlIZcy07LUF2bgwK","id":1},"id":8},{"brand":"Chnir!","type":"Cheap shoes12313f","model":"Sports","year":"2019","shoeSize":46,"user":{"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com","password":"$2a$08$0qTSbktSweASMA1ayac5T.75BvsQJpT5MLUplxlIZcy07LUF2bgwK","id":1},"id":9},{"brand":"Chnir","type":"Very cheap shoes123123","model":"Running like an idiot","year":"2019","shoeSize":45,"user":{"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com","password":"$2a$08$0qTSbktSweASMA1ayac5T.75BvsQJpT5MLUplxlIZcy07LUF2bgwK","id":1},"id":10},{"brand":"Chnir!","type":"Cheap shoes12313f","model":"Sports","year":"2019","shoeSize":46,"user":{"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com","password":"$2a$08$0qTSbktSweASMA1ayac5T.75BvsQJpT5MLUplxlIZcy07LUF2bgwK","id":1},"id":11},{"brand":"Chnir","type":"Very cheap shoes123123","model":"Running like an idiot","year":"2019","shoeSize":45,"user":{"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com","password":"$2a$08$0qTSbktSweASMA1ayac5T.75BvsQJpT5MLUplxlIZcy07LUF2bgwK","id":1},"id":12},{"brand":"Chnir!","type":"Cheap shoes12313f","model":"Sports","year":"2019","shoeSize":46,"user":{"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com","password":"$2a$08$0qTSbktSweASMA1ayac5T.75BvsQJpT5MLUplxlIZcy07LUF2bgwK","id":1},"id":13},{"brand":"Chnir","type":"Very cheap shoes123123","model":"Running like an idiot","year":"2019","shoeSize":45,"user":{"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com","password":"$2a$08$0qTSbktSweASMA1ayac5T.75BvsQJpT5MLUplxlIZcy07LUF2bgwK","id":1},"id":14},{"brand":"Chnir!","type":"Cheap shoes12313f","model":"Sports","year":"2019","shoeSize":46,"user":{"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com","password":"$2a$08$0qTSbktSweASMA1ayac5T.75BvsQJpT5MLUplxlIZcy07LUF2bgwK","id":1},"id":15},{"brand":"Chnir","type":"Very cheap shoes123123","model":"Running like an idiot","year":"2019","shoeSize":45,"user":{"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com","password":"$2a$08$0qTSbktSweASMA1ayac5T.75BvsQJpT5MLUplxlIZcy07LUF2bgwK","id":1},"id":16},{"brand":"Chnir!","type":"Cheap shoes12313f","model":"Sports","year":"2019","shoeSize":46,"user":{"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com","password":"$2a$08$0qTSbktSweASMA1ayac5T.75BvsQJpT5MLUplxlIZcy07LUF2bgwK","id":1},"id":17},{"brand":"Chnir","type":"Very cheap shoes123123","model":"Running like an idiot","year":"2019","shoeSize":45,"user":{"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com","password":"$2a$08$0qTSbktSweASMA1ayac5T.75BvsQJpT5MLUplxlIZcy07LUF2bgwK","id":1},"id":18}]}}
+info: Server is up on port 4000
+info: connected to POSTGRES (burp) ספערגטסופ
+info: User authenticated successfully
+info: {"user":{"id":1,"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com","userSneakers":[{"id":3,"brand":"Chnir!","model":"Sports","type":"Cheap shoes12313f","year":"2019","shoeSize":46},{"id":4,"brand":"Chnir","model":"Running like an idiot","type":"Very cheap shoes123123","year":"2019","shoeSize":45},{"id":5,"brand":"Chnir!","model":"Sports","type":"Cheap shoes12313f","year":"2019","shoeSize":46},{"id":6,"brand":"Chnir","model":"Running like an idiot","type":"Very cheap shoes123123","year":"2019","shoeSize":45},{"id":7,"brand":"Chnir!","model":"Sports","type":"Cheap shoes12313f","year":"2019","shoeSize":46},{"id":8,"brand":"Chnir","model":"Running like an idiot","type":"Very cheap shoes123123","year":"2019","shoeSize":45},{"id":9,"brand":"Chnir!","model":"Sports","type":"Cheap shoes12313f","year":"2019","shoeSize":46},{"id":10,"brand":"Chnir","model":"Running like an idiot","type":"Very cheap shoes123123","year":"2019","shoeSize":45},{"id":11,"brand":"Chnir!","model":"Sports","type":"Cheap shoes12313f","year":"2019","shoeSize":46},{"id":12,"brand":"Chnir","model":"Running like an idiot","type":"Very cheap shoes123123","year":"2019","shoeSize":45},{"id":13,"brand":"Chnir!","model":"Sports","type":"Cheap shoes12313f","year":"2019","shoeSize":46},{"id":14,"brand":"Chnir","model":"Running like an idiot","type":"Very cheap shoes123123","year":"2019","shoeSize":45},{"id":15,"brand":"Chnir!","model":"Sports","type":"Cheap shoes12313f","year":"2019","shoeSize":46},{"id":16,"brand":"Chnir","model":"Running like an idiot","type":"Very cheap shoes123123","year":"2019","shoeSize":45},{"id":17,"brand":"Chnir!","model":"Sports","type":"Cheap shoes12313f","year":"2019","shoeSize":46},{"id":18,"brand":"Chnir","model":"Running like an idiot","type":"Very cheap shoes123123","year":"2019","shoeSize":45}]}}
+info: User authenticated successfully
+info: {"id":18,"brand":"Chnir","model":"Running like an idiot","type":"Very cheap shoes123123","year":"2019","shoeSize":45}
+info: Server is up on port 4000
+info: connected to POSTGRES (burp) ספערגטסופ
+info: Server is up on port 4000
+info: connected to POSTGRES (burp) ספערגטסופ
+info: Server is up on port 4000
+info: connected to POSTGRES (burp) ספערגטסופ
+info: Server is up on port 4000
+info: connected to POSTGRES (burp) ספערגטסופ
+info: User authenticated successfully
+info: {"id":18,"brand":"Chnir","model":"Running like an idiot","type":"Very cheap shoes123123","year":"2019","shoeSize":45}
+info: User authenticated successfully
+info: {"id":18,"brand":"Chnir","model":"Running like an idiot","type":"Very cheap shoes123123","year":"2019","shoeSize":45}
+info: User authenticated successfully
+info: {"id":18,"brand":"Chnir","model":"Running like an idiot","type":"Very cheap shoes123123","year":"2019","shoeSize":45}
+info: Server is up on port 4000
+info: connected to POSTGRES (burp) ספערגטסופ
+info: User authenticated successfully
+error: "Cannot read property 'toSneakerResponseObject' of undefined"
+info: Server is up on port 4000
+info: connected to POSTGRES (burp) ספערגטסופ
+info: User authenticated successfully
+error: "Cannot destructure property 'firstName' of 'user' as it is undefined."
+info: User authenticated successfully
+error: "Cannot destructure property 'firstName' of 'user' as it is undefined."
+info: User authenticated successfully
+info: {"user":{"id":1,"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com","userSneakers":[{"id":3,"brand":"Chnir!","model":"Sports","type":"Cheap shoes12313f","year":"2019","shoeSize":46},{"id":4,"brand":"Chnir","model":"Running like an idiot","type":"Very cheap shoes123123","year":"2019","shoeSize":45},{"id":5,"brand":"Chnir!","model":"Sports","type":"Cheap shoes12313f","year":"2019","shoeSize":46},{"id":6,"brand":"Chnir","model":"Running like an idiot","type":"Very cheap shoes123123","year":"2019","shoeSize":45},{"id":7,"brand":"Chnir!","model":"Sports","type":"Cheap shoes12313f","year":"2019","shoeSize":46},{"id":8,"brand":"Chnir","model":"Running like an idiot","type":"Very cheap shoes123123","year":"2019","shoeSize":45},{"id":9,"brand":"Chnir!","model":"Sports","type":"Cheap shoes12313f","year":"2019","shoeSize":46},{"id":10,"brand":"Chnir","model":"Running like an idiot","type":"Very cheap shoes123123","year":"2019","shoeSize":45},{"id":11,"brand":"Chnir!","model":"Sports","type":"Cheap shoes12313f","year":"2019","shoeSize":46},{"id":12,"brand":"Chnir","model":"Running like an idiot","type":"Very cheap shoes123123","year":"2019","shoeSize":45},{"id":13,"brand":"Chnir!","model":"Sports","type":"Cheap shoes12313f","year":"2019","shoeSize":46},{"id":14,"brand":"Chnir","model":"Running like an idiot","type":"Very cheap shoes123123","year":"2019","shoeSize":45},{"id":15,"brand":"Chnir!","model":"Sports","type":"Cheap shoes12313f","year":"2019","shoeSize":46},{"id":16,"brand":"Chnir","model":"Running like an idiot","type":"Very cheap shoes123123","year":"2019","shoeSize":45},{"id":17,"brand":"Chnir!","model":"Sports","type":"Cheap shoes12313f","year":"2019","shoeSize":46},{"id":18,"brand":"Chnir","model":"Running like an idiot","type":"Very cheap shoes123123","year":"2019","shoeSize":45}]}}
+info: User authenticated successfully
+error: "relation \"sneaker\" does not exist"
+info: User authenticated successfully
+info: {"user":{"id":1,"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com"}}
+info: User authenticated successfully
+info: {"user":{"id":1,"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com"}}
+info: User authenticated successfully
+error: "relation \"sneaker\" does not exist"
+info: User authenticated successfully
+error: "relation \"sneaker\" does not exist"
+info: User authenticated successfully
+error: "relation \"sneaker\" does not exist"
+info: User authenticated successfully
+error: "relation \"sneaker\" does not exist"
+info: User authenticated successfully
+error: "relation \"sneaker\" does not exist"
+info: User authenticated successfully
+error: "relation \"sneaker\" does not exist"
+info: User authenticated successfully
+error: "relation \"sneaker\" does not exist"
+info: User authenticated successfully
+info: {"user":{"id":1,"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com"}}
+info: User authenticated successfully
+error: "relation \"sneaker\" does not exist"
+info: User authenticated successfully
+error: "relation \"sneaker\" does not exist"
+info: User authenticated successfully
+error: "relation \"sneaker\" does not exist"
+info: User authenticated successfully
+error: "relation \"sneaker\" does not exist"
+info: Server is up on port 4000
+info: connected to POSTGRES (burp) ספערגטסופ
+info: User authenticated successfully
+info: {"user":{"id":1,"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com","userSneakers":[]}}
+info: User authenticated successfully
+info: {"user":{"id":1,"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com","userSneakers":[]}}
+info: Server is up on port 4000
+error: "Invalid token"
+info: connected to POSTGRES (burp) ספערגטסופ
+info: User authenticated successfully
+info: {"user":{"id":1,"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com","sneakers":[]}}
+info: User authenticated successfully
+info: "Sneakers added to user successfully"
+info: User authenticated successfully
+info: {"user":{"id":1,"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com","sneakers":[{"id":1,"brand":"Chnir!","model":"Sports","type":"Cheap shoes12313f","year":"2019","shoeSize":46},{"id":2,"brand":"Chnir","model":"Running like an idiot","type":"Very cheap shoes123123","year":"2019","shoeSize":45}]}}
+info: User authenticated successfully
+error: "Resource not found"
+info: User authenticated successfully
+error: "Cannot destructure property 'firstName' of 'user' as it is undefined."
+info: Server is up on port 4000
+info: connected to POSTGRES (burp) ספערגטסופ
+info: User authenticated successfully
+error: "Cannot read property 'id' of undefined"
+info: Server is up on port 4000
+info: connected to POSTGRES (burp) ספערגטסופ
+info: User authenticated successfully
+error: "Cannot read property 'id' of undefined"
+info: Server is up on port 4000
+info: connected to POSTGRES (burp) ספערגטסופ
+info: User authenticated successfully
+error: "Cannot read property 'id' of undefined"
+info: Server is up on port 4000
+info: connected to POSTGRES (burp) ספערגטסופ
+info: User authenticated successfully
+error: "Cannot read property 'id' of undefined"
+info: User authenticated successfully
+error: "Cannot read property 'id' of undefined"
+info: Server is up on port 4000
+info: connected to POSTGRES (burp) ספערגטסופ
+info: User authenticated successfully
+error: "Cannot read property 'id' of undefined"
+info: Server is up on port 4000
+info: connected to POSTGRES (burp) ספערגטסופ
+info: User authenticated successfully
+info: {"id":1,"brand":"Chnir!","model":"Sports","type":"Cheap shoes12313f","year":"2019","shoeSize":46,"user":{"id":1,"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com"}}
+info: Server is up on port 4000
+info: connected to POSTGRES (burp) ספערגטסופ
+info: User authenticated successfully
+info: {"user":{"id":1,"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com","sneakers":[{"id":1,"brand":"Chnir!","model":"Sports","type":"Cheap shoes12313f","year":"2019","shoeSize":46},{"id":2,"brand":"Chnir","model":"Running like an idiot","type":"Very cheap shoes123123","year":"2019","shoeSize":45}]}}
+info: User authenticated successfully
+info: {"id":1,"brand":"Chnir!","model":"Sports","type":"Cheap shoes12313f","year":"2019","shoeSize":46,"user":{"id":1,"firstName":"John","lastName":"Adams","email":"johnadams@gmail.com"}}
+info: Server is up on port 4000
+info: connected to POSTGRES (burp) ספערגטסופ
